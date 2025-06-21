@@ -1,0 +1,13 @@
+[Unit]
+Description=Trigger to remove unused flatpaks
+Documentation=man:flatpak-uninstall(1)
+
+[Timer]
+OnBootSec=15m
+OnUnitActiveSec=12h
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+#Runs 15 minutes after boot, and then every 12 hours. Triggers the cleanup service file.

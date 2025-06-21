@@ -1,0 +1,23 @@
+com.github.tchx84.Flatseal
+com.ranfdev.DistroShelf
+com.usebottles.bottles
+com.valvesoftware.Steam
+dev.geopjr.Archives
+io.github.flattool.Warehouse
+io.missioncenter.MissionCenter
+net.davidotek.pupgui2
+org.gnome.Boxes
+org.gnome.Boxes.Extension.OsinfoDb
+org.gnome.Maps
+org.gtk.Gtk3theme.adw-gtk3
+org.gtk.Gtk3theme.adw-gtk3-dark
+org.libreoffice.LibreOffice
+org.mozilla.firefox
+org.telegram.desktop
+org.telegram.desktop.webview org.telegram.desktop.webview.Locale
+org.videolan.VLC
+org.virt_manager.virt-manager
+org.virt_manager.virt_manager.Extension.Qemu
+runtime/org.freedesktop.Platform.VulkanLayer.MangoHud/x86_64/24.08
+runtime/org.freedesktop.Platform.VulkanLayer.OBSVkCapture/x86_64/24.08
+runtime/org.freedesktop.Platform.VulkanLayer.vkBasalt/x86_64/24.08

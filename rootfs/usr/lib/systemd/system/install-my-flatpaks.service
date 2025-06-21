@@ -1,0 +1,15 @@
+[Unit]
+Description=Install my custom Flatpaks from a list
+# Run only if Flathub repo is ready AND replacements done AND my apps not yet installed
+ConditionPathExists=/var/lib/flatpak/.flathub-repo-initialized
+ConditionPathExists=/var/lib/flatpak/.flathub-apps-initialized
+ConditionPathExists=!/var/lib/flatpak/.my-flatpaks-initialized
+After=flatpak-replace-fedora-apps.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash /usr/local/bin/install-my-flatpaks.sh
+
+[Install]
+WantedBy=multi-user.target
