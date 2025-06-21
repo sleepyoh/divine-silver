@@ -15,6 +15,9 @@ bash "$SCRIPT_DIR/enarpmfus.sh"
 echo "Installing and removing packages..."
 bash "$SCRIPT_DIR/packages.sh"
 
+echo "Installing copr stuff..."
+bash "$SCRIPT_DIR/copr.sh"
+
 echo "Cleaning up..."
 bash "$SCRIPT_DIR/cleanup.sh"
 

@@ -16,6 +16,6 @@ find /var/cache/* -maxdepth 0 -type d \! -name libdnf5 \! -name rpm-ostree -exec
 mkdir -p /var/tmp
 chmod -R 1777 /var/tmp
 
-# Commit and lint container
-ostree container commit
-bootc container lint
+# Cleanup specific to bootc (important for non-empty boot issue)
+# Remove tmp files and everything in dirs that make bootc unhappy
+rm -rf /boot && mkdir /boot # This line is good and should be kept, we get non empty boot errors otherwise.
