@@ -23,8 +23,6 @@ org.kde.kolourpaint
 org.libreoffice.LibreOffice
 org.mozilla.firefox
 org.telegram.desktop
-org.telegram.desktop.webview 
-org.telegram.desktop.webview.Locale
 org.videolan.VLC
 org.virt_manager.virt-manager
 org.virt_manager.virt_manager.Extension.Qemu
