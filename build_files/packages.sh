@@ -6,7 +6,7 @@ dnf5 install -y \
     gparted \
     fastfetch \
     distrobox \
-    ptyxis \
+    #ptyxis \
     adobe-source-code-pro-fonts \
     steam-devices \
     just
@@ -17,7 +17,8 @@ dnf5 install -y \
     firefox \
     firefox-langpacks \
     yelp \  
-    gnome-console
+    gnome-tour   
+    
 
 
 
