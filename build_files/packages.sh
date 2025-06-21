@@ -15,9 +15,10 @@ dnf5 install -y \
     dnf5 remove -y \
     firefox \
     firefox-langpacks \
-    yelp \  
-    gnome-tour   
+    yelp \
+    gnome-tour
     
+
 
 
 
