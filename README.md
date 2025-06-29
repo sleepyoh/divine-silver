@@ -4,24 +4,24 @@ This repository is a custom build of Fedora silverblue, inspired originally by U
 
 # Goal
 
-The goal of this image is to create a stable Immutable Gnome desktop with as many packages removed from base Gnome as possible, and opting for everything from Flatpak@Flathub. This means all removed to give a blank Gnome canvas.
+Everything possible that are standard applications are removed, every flatpak is removed. Every app possible is installed from flatpak.
 
-We switch all Fedora flatpaks to Flathub flatpaks on first boot, and then disable Fedora flatpak repo, and we enable a timer that removes old unused flatpaks on boot. 
+Installs all good codecs from rpmfusion, we change mesa to mesa-freeworld to benefit from full hardware acceleration on Amd graphics cards.  
 
-we get all good codecs from rpmfusion, we change mesa to mesa-freeworld to benefit from full hardware acceleration on Amd graphics cards.  
+We install some useful things like Distrobox, Fastfetch and gparted.
 
-We install some useful things like Distrobox, Fastfetch and Htop.
+We get latest CachyOs kernel from official copr repo.
 
-That's about it (for now)!
+Steam-vapor theme is included.
+
 
 # How does it work?
 
 The containerfile sets up so we can have bash scripts in build_files instead of having a giant containerfile with everything. Only reason for this is to make simpler, and comparmentalize different steps in the build. 
 
-All scripts that installs, removes, enables systemd timers and so on lives in build_files directory, Build.sh  points to the other scripts where we do what we want. We can add more, disable current scripts, and so on. 
+All scripts that installs, removes, enables systemd timers and so on lives in build_files directory, Build.sh  points to the other scripts where we do what we want. We can add more, disable current scripts, and so on. All systemd files where we do a bunch of magic with timers, one shot and conditions, are installed rootfs/usr/local or /rootfs/lib/systemd/system.
 
 The containerfile is also responsible for copying all our files from repo rootfs to /. Here we can add themes, systemd unit files, anything we want to copy over to the Immutables system. 
-
 
 
 ## INSPIRED BY

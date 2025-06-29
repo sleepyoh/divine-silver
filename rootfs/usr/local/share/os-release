@@ -1,0 +1,7 @@
+NAME="Sleepy Linux"
+VERSION="Kinoite"
+RELEASE_TYPE="Sometimes I update"
+VERSION_ID=42
+VERSION_CODENAME="Pretty Kinoite Sleepy-version"
+PRETTY_NAME="Sleepy Linux 42(Kinoite)"
+ANSI_COLOR="0;38;2;60;110;180"

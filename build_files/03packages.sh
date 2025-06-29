@@ -1,15 +1,17 @@
 #!/bin/bash
 set -ouex pipefail
 
-# this installs a package from fedora repos
+# this installs packages from all fedora/rpm repos
 dnf5 install -y \
     gparted \
     fastfetch \
     distrobox \
+    ptyxis \
     adobe-source-code-pro-fonts \
     steam-devices \
-    just
-
+    zstd \
+    just \
+    libva-intel-driver
 
 # remove default useless packages
     dnf5 remove -y \
@@ -17,10 +19,4 @@ dnf5 install -y \
     firefox-langpacks \
     yelp \
     gnome-tour
-    
-
-
-
-
-
 
