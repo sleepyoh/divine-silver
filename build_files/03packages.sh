@@ -1,6 +1,9 @@
 #!/bin/bash
 set -ouex pipefail
 
+# Virtualization stuff
+dnf5 install -y @virtualization
+
 # this installs packages from all fedora/rpm repos
 dnf5 install -y \
     gparted \
