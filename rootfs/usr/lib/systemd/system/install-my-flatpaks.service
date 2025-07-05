@@ -4,7 +4,7 @@ Description=Install my custom Flatpaks from a list
 ConditionPathExists=/var/lib/flatpak/.flathub-repo-initialized
 ConditionPathExists=/var/lib/flatpak/.flathub-apps-initialized
 ConditionPathExists=!/var/lib/flatpak/.my-flatpaks-initialized
-After=flatpak-replace-fedora-apps.service
+After=flatpak-remove-all.service
 Wants=network-online.target
 
 [Service]
