@@ -14,7 +14,20 @@ dnf5 install -y \
     steam-devices \
     zstd \
     just \
-    libva-intel-driver
+    libva-intel-driver \
+    tmux \
+    yt-dlp \
+    traceroute \
+    nmap \
+    unrar \
+    htop \
+    btop \
+    gdu \
+    fish \
+    speedtest-cli \
+    lolcat \
+    cowsay \
+    cmatrix
 
 # remove default useless packages
     dnf5 remove -y \
@@ -22,4 +35,3 @@ dnf5 install -y \
     firefox-langpacks \
     yelp \
     gnome-tour
-
