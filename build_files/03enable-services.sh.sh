@@ -2,7 +2,8 @@
 set -euox pipefail
 
 	# Enabling systemd-services
-    systemctl enable podman.socket
+    systemctl enable libvirtd.service
+	systemctl enable podman.socket
     systemctl enable flatpak-add-flathub-repo.service
 	systemctl enable flatpak-remove-all.service
 	systemctl enable flatpak-cleanup.timer

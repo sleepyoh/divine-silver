@@ -5,8 +5,6 @@ set -ouex pipefail
 #dnf5 -y config-manager setopt "rpmfusion*.enabled=0"
 #dnf5 -y config-manager setopt "fedora-cisco-openh264.enabled=0"
 
-systemctl enable libvirtd.service
-
 # Disabling a default fedora repo for som copr-python thing
 dnf5 -y copr remove phracek/PyCharm
 

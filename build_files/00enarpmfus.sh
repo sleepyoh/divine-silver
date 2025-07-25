@@ -5,9 +5,6 @@ rpm-ostree install \
 		https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
 		https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-		#There is an error upstream with confĺicting gstreamer packages since plasma 6.4 launched in fedora. This enables testing for now, until upstream fixes the conflict.
-#sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/rpmfusion-free-updates-testing.repo
-#sed -i 's/enabled=0/enabled=1/' /etc/yum.repos.d/rpmfusion-nonfree-updates-testing.repo
 
 rpm-ostree override remove \
 		ffmpeg-free \
