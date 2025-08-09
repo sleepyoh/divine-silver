@@ -17,15 +17,12 @@ dnf5 install -y \
     loupe \
     file-roller-nautilus \
     kolourpaint \
-    kdenlive \
     steam \
     obs-studio \
     obs-studio-plugin-vkcapture \
     obs-studio-plugin-vaapi \
     obs-studio-plugin-x264 \
     obs-studio-plugin-vlc-video \
-    handbrake \
-    handbrake-gui \
     telegram-desktop \
     vlc \
     libreoffice-core \

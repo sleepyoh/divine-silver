@@ -11,8 +11,8 @@ bash "$SCRIPT_DIR/00enarpmfus.sh"
 echo "Installing and removing packages..."
 bash "$SCRIPT_DIR/01packages.sh"
 
-echo "Installing copr stuff..."
-bash "$SCRIPT_DIR/02cachy-kernel.sh"
+#echo "Installing copr stuff..."
+#bash "$SCRIPT_DIR/02cachy-kernel.sh"
 
 echo "enabling services..."
 bash "$SCRIPT_DIR/03enable-services.sh"
