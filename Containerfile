@@ -1,7 +1,7 @@
-# Base Image
+# Base Image tag we want to use
 ARG FEDORA_MAJOR_VERSION=43
 
-# Stage 1 Allow build scripts to be referenced without being copied into the final image
+# Stage 1 build. Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
 COPY build_files /
 # ARG FEDORA_MAJOR_VERSION=43  <-- Do not put it here
@@ -9,17 +9,14 @@ COPY build_files /
 # Stage 2 (your main image stage)
 FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 
-
 ## Other possible base images include:
 # Universal Blue Images: https://github.com/orgs/ublue-os/packages
 # Fedora base image: quay.io/fedora/fedora-bootc:41
 # CentOS base images: quay.io/centos-bootc/centos-bootc:stream10
 
-
 #This copies all the files from folder rootfs to /
 #This is how we get systemd-unit files, and other files we want to to copy to the immutable system.
 COPY rootfs/ /
-
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
@@ -34,6 +31,6 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/log \
     /ctx/build.sh
     
-    ### LINTING
+### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint    
