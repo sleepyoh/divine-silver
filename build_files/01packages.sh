@@ -17,6 +17,7 @@ dnf5 install -y \
     loupe \
     file-roller-nautilus \
     kolourpaint \
+    bottles
     steam \
     obs-studio \
     obs-studio-plugin-vkcapture \
