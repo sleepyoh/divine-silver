@@ -4,7 +4,7 @@ COPY build_files /
 
 # Base Image
 ARG FEDORA_MAJOR_VERSION=43
-FROM quay.io/fedora/fedora-silverblue${FEDORA_MAJOR_VERSION}
+FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 #FROM quay.io/fedora/fedora-kinoite
 
 ## Other possible base images include:
