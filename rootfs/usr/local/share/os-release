@@ -1,7 +1,7 @@
 NAME="Sleepy Linux"
 VERSION="Silverblue"
 RELEASE_TYPE="Sometimes I update"
-VERSION_ID=42
+VERSION_ID=43
 VERSION_CODENAME="Silverblue Sleepy-version"
-PRETTY_NAME="Sleepy Linux 42(Silverblue)"
+PRETTY_NAME="Sleepy Linux 43(Silverblue)"
 ANSI_COLOR="0;38;2;60;110;180"
