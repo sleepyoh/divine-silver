@@ -4,22 +4,26 @@ This repository is a custom build of Fedora silverblue, inspired originally by U
 
 # Goal
 
-Everything possible that are standard applications are removed, every flatpak is removed. Every app possible is installed from flatpak.
+A "ready to use" image customized for my needs. 
 
-Installs all good codecs from rpmfusion, we change mesa to mesa-freeworld to benefit from full hardware acceleration on Amd graphics cards.  
+Removing unused included applications, for peace of mind.
 
-We install some useful things like Distrobox, Fastfetch and gparted.
+Installing Codecs and hardware drivers from Rpmfusion to get proper hw-acceleration.
 
-We get latest CachyOs kernel from official copr repo.
+Including every terminal program I use daily, instead of relying on Distrobox. Things like nmap need access to hardware and needs to be natively installed to work properly. 
 
-Steam-vapor theme is included.
+Every program I daily use and which is available to install from standard repos is installed. Steam, Bottles, Obs, Virt-manager, etc. Flatpak is used only for applications not existing as native rpm-packages, things like vscodium, podman-desktop etc.  
 
+Switching to Cachy-os kernel.
+
+May contain more changes, but this is basically it!
 
 # How does it work?
 
-The containerfile sets up so we can have bash scripts in build_files instead of having a giant containerfile with everything. Only reason for this is to make simpler, and comparmentalize different steps in the build. 
+The containerfile sets up so we can have bash scripts in build_files instead of having a giant containerfile with everything. This makes it very modular, since we have one script referencing all the other scripts, we can easily remove or add build scripts that we will be executed in the order we select. 
 
-All scripts that installs, removes, enables systemd timers and so on lives in build_files directory, Build.sh  points to the other scripts where we do what we want. We can add more, disable current scripts, and so on. All systemd files where we do a bunch of magic with timers, one shot and conditions, are installed rootfs/usr/local or /rootfs/lib/systemd/system.
+
+There are some unit files with conditions for execution which sets up and installs some Flatpaks at first boot. All systemd files where we do a bunch of magic with timers, one shot and conditions, are installed rootfs/usr/local or /rootfs/lib/systemd/system.
 
 The containerfile is also responsible for copying all our files from repo rootfs to /. Here we can add themes, systemd unit files, anything we want to copy over to the Immutables system. 
 
