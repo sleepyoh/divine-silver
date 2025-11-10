@@ -7,7 +7,7 @@ set -euox pipefail
     systemctl enable flatpak-add-flathub-repo.service
 	systemctl enable flatpak-remove-all.service
 	systemctl enable flatpak-cleanup.timer
-	systemctl enable install-my-flatpaks.service
+	#systemctl enable install-my-flatpaks.service
 	systemctl enable rpm-ostreed-automatic.timer
 	###Disabling stuff I dont want or need
 	systemctl disable bluetooth.service # I dont have bluetooth

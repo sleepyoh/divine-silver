@@ -6,9 +6,8 @@ dnf5 install -y @virtualization
 
 # this installs packages from all fedora/rpm repos
 dnf5 install -y \
-    libva-intel-driver \
+    intel-media-driver \
     gparted \
-    gnome-maps \
     gnome-clocks \
     gnome-weather \
     gnome-calculator \
@@ -16,21 +15,6 @@ dnf5 install -y \
     evince \
     loupe \
     file-roller-nautilus \
-    kolourpaint \
-    bottles \
-    steam \
-    obs-studio \
-    obs-studio-plugin-vkcapture \
-    obs-studio-plugin-vaapi \
-    obs-studio-plugin-x264 \
-    obs-studio-plugin-vlc-video \
-    telegram-desktop \
-    vlc \
-    libreoffice-core \
-    libreoffice-writer \
-    libreoffice-impress \
-    libreoffice-calc \
-    mangohud \
     fastfetch \
     distrobox \
     google-roboto-fonts \
