@@ -40,4 +40,6 @@ dnf5 install -y \
 # remove default useless packages
     dnf5 remove -y \
     yelp \
-    gnome-tour
+    gnome-tour \
+    firefox \
+    firefox-langpacks
