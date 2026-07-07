@@ -7,7 +7,7 @@ COPY build_files /
 # ARG FEDORA_MAJOR_VERSION=43  <-- Do not put it here
 
 # Stage 2 (your main image stage)
-FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
+FROM quay.io/fedora-ostree-desktops/silverblue:${FEDORA_MAJOR_VERSION}
 
 ## Other possible base images include:
 # Universal Blue Images: https://github.com/orgs/ublue-os/packages
