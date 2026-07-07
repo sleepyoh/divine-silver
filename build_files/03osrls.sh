@@ -13,5 +13,5 @@ rm \
     /etc/yum.repos.d/rpmfusion* \
     /etc/yum.repos.d/fedora-cisco-openh264.repo \
 
-    cp /usr/local/share/os-release /etc/os-release 
-    cp /usr/local/share/os-release /usr/lib/os-release
+    cp /usr/share/os-release /etc/os-release 
+    cp /usr/share/os-release /usr/lib/os-release
