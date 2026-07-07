@@ -4,30 +4,21 @@ ARG FEDORA_MAJOR_VERSION=44
 # Stage 1 build. Allow build scripts to be referenced without being copied into the final image
 FROM scratch AS ctx
 COPY build_files /
-# ARG FEDORA_MAJOR_VERSION=43  <-- Do not put it here
+COPY system_files /system_files
 
-# Stage 2 (your main image stage)
+# Base Image
 FROM quay.io/fedora/fedora-silverblue:${FEDORA_MAJOR_VERSION}
 # quay.io/fedora-ostree-desktops/silverblue This is apparently new location? in between the bootc locaiton 
 # they are in the process of migrating to? not sure. 
 
-
 ## Other possible base images include:
-# Universal Blue Images: https://github.com/orgs/ublue-os/packages
-# Fedora base image: quay.io/fedora/fedora-bootc:41
+#Universal Blue Images: https://github.com/orgs/ublue-os/packages
+# Fedora base image: quay.io/fedora/fedora-bootc:44
 # CentOS base images: quay.io/centos-bootc/centos-bootc:stream10
-
-#This copies all the files from folder rootfs to /
-#This is how we get systemd-unit files, and other files we want to to copy to the immutable system.
-COPY rootfs/ /
 
 ### MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
-
-## tmpfs needs to be on /var/tmp, /tmp gives us cross device build errors for cachyos kernel.
-## We used to have--mount=type=tmpfs,dst=/tmp \ as last mount, but it fails with dracut/cacho kernel.
-## We switched to ##--mount=type=tmpfs,dst=/var/tmp \ which builds, but looking at bluefin it doesn't seem necessary.
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \

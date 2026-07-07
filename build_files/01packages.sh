@@ -21,7 +21,6 @@ dnf5 install -y \
     rsms-inter-fonts \
     adobe-source-code-pro-fonts \
     steam-devices \
-    zstd \
     just \
     tmux \
     yt-dlp \
