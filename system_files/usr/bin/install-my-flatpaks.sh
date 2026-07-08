@@ -5,7 +5,7 @@ set -ouex pipefail
 echo "Installing user-specified Flatpaks..."
 
 # Path to your list
-LIST_FILE="/usr/local/share/my-flatpaks"
+LIST_FILE="/usr/share/my-flatpaks"
 
 
 # Read & install each
