@@ -6,8 +6,6 @@ set -ouex pipefail
 
 # this installs packages from all fedora/rpm repos
 dnf5 install -y \
-    intel-media-driver \
-    gparted \
     gnome-clocks \
     gnome-weather \
     gnome-calculator \
@@ -17,8 +15,6 @@ dnf5 install -y \
     file-roller-nautilus \
     fastfetch \
     distrobox \
-    google-roboto-fonts \
-    rsms-inter-fonts \
     adobe-source-code-pro-fonts \
     steam-devices \
     just \
