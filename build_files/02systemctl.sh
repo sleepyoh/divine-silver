@@ -33,3 +33,5 @@ systemctl disable tuned.service tuned-ppd.service auditd.service
 
 # Extra TTYs (keep tty2 for recovery)
 systemctl disable getty@tty3.service getty@tty4.service
+systemctl disable pcscd.socket pcscd.service
+systemctl disable saned.socket
