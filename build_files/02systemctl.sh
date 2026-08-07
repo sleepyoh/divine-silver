@@ -21,3 +21,15 @@ set -euox pipefail
 	systemctl disable switcheroo-control.service #optimus graphic/hybrid laptop
 	##systemctl disable qemu-guest-agent.service I use vm's often
 	##this is probably needed
+	#This is new copy paste from somewhere 
+	# Printing & zero-conf network
+systemctl disable cups.service avahi-daemon.service
+
+# Enterprise auth / Kerberos
+systemctl disable sssd-kcm.service gssproxy.service systemd-homed.service
+
+# System tuning & audit logs
+systemctl disable tuned.service tuned-ppd.service auditd.service
+
+# Extra TTYs (keep tty2 for recovery)
+systemctl disable getty@tty3.service getty@tty4.service
