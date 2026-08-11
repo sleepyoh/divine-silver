@@ -37,4 +37,5 @@ dnf5 install -y \
     yelp \
     gnome-tour \
     firefox \
-    firefox-langpacks
+    firefox-langpacks \
+    gnome-software
