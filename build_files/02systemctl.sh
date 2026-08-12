@@ -16,4 +16,3 @@ set -euox pipefail
 	systemctl disable pcscd.socket #smart card socket listener
 	systemctl disable cups.service #cups print scheduler
 	systemctl disable cups.socket #cups print socket listener
-	systemctl disable systemd-homed.service #systemd home directory manager
