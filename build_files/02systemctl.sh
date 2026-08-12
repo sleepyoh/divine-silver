@@ -6,11 +6,17 @@ set -euox pipefail
 	systemctl enable podman.socket
 	systemctl enable flatpak-cleanup.timer
 	###Disabling stuff I dont want or need
-	systemctl disable mdmonitor.service # I dont use any lvm or raid
 	systemctl disable lvm2-monitor.service #I dont use any lvm or raid
 	systemctl disable ModemManager.service #I have fiber not 56k
-	systemctl disable vboxservice.service #virtualbox thing
-	systemctl disable vgauthd.service #wmvare ting
-	systemctl disable vmtoolsd.service #vmware thing
 	systemctl disable sssd.service #ldap/active directory
 	systemctl disable switcheroo-control.service #optimus graphic/hybrid laptop
+	#More stuff removed.
+	systemctl disable sssd-kcm.service #kerberos credential manager
+	systemctl disable pcscd.service #smart card daemon
+	systemctl disable pcscd.socket #smart card socket listener
+	systemctl disable cups.service #cups print scheduler
+	systemctl disable cups.socket #cups print socket listener
+	systemctl disable systemd-homed.service #systemd home directory manager
+	systemctl disable thermald.service #intel thermal management
+	systemctl disable intel_lpmd.service #intel low power mode daemon
+	systemctl disable qemu-guest-agent.service #qemu guest agent
