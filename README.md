@@ -6,15 +6,13 @@ This repository is a custom build of Fedora silverblue, inspired originally by U
 
 A "ready to use" image customized for my needs. 
 
-Removing unused included applications, for peace of mind.
-
-Installing Codecs and hardware drivers from Rpmfusion to get proper hw-acceleration on Intel-T450.
+Removing unused included applications, disabling most services I dont need.
 
 # How does it work?
 
 The containerfile sets up so we can have bash scripts in build_files instead of having a large containerfile with everything. This makes it very modular, since we have one script referencing all the other scripts, we can easily remove or add build scripts that we will be executed in the order we select. 
 
-The containerfile is also responsible for copying all our files from repo rootfs to /. Here we can add themes, systemd unit files, anything we want to copy over to the Immutables system. 
+The containerfile is also responsible for copying all our files from repo system_files to the build, and then copy it to the final image. Here we can add themes, systemd unit files, anything we want to copy over to the Immutables system. 
 
 
 ## INSPIRED BY
