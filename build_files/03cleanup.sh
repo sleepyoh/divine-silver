@@ -12,5 +12,8 @@ dnf5 -y copr remove phracek/PyCharm
 # Clean package manager cache
 dnf5 clean all
 
+
+#Clean temporary files
+rm -rf /tmp/*
 # Cleanup specific to bootc (important for non-empty boot issue) not needed if not changing to CachyOs kernel.
 #rm -rf /boot && mkdir /boot 
