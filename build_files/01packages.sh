@@ -9,7 +9,6 @@ dnf5 install -y \
     file-roller-nautilus \
     fastfetch \
     distrobox \
-    adobe-source-code-pro-fonts \
     steam-devices \
     just \
     tmux \
@@ -31,4 +30,6 @@ dnf5 install -y \
     gnome-tour \
     firefox \
     firefox-langpacks \
-    gnome-software
+    gnome-software \
+    gnome-disk-utility \
+    gnome-system-monitor
