@@ -17,6 +17,3 @@ set -euox pipefail
 	systemctl disable cups.service #cups print scheduler
 	systemctl disable cups.socket #cups print socket listener
 	systemctl disable systemd-homed.service #systemd home directory manager
-	systemctl disable thermald.service #intel thermal management
-	systemctl disable intel_lpmd.service #intel low power mode daemon
-	systemctl disable qemu-guest-agent.service #qemu guest agent
