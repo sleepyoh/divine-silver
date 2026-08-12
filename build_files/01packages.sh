@@ -6,12 +6,6 @@ set -ouex pipefail
 
 # this installs packages from all fedora/rpm repos
 dnf5 install -y \
-    gnome-clocks \
-    gnome-weather \
-    gnome-calculator \
-    gnome-calendar \
-    evince \
-    loupe \
     file-roller-nautilus \
     fastfetch \
     distrobox \
@@ -22,12 +16,11 @@ dnf5 install -y \
     yt-dlp \
     traceroute \
     nmap \
-    unrar \
+    unar \
     htop \
     btop \
     gdu \
     fish \
-    speedtest-cli \
     lolcat \
     cowsay \
     cmatrix
