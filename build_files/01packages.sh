@@ -6,28 +6,20 @@ set -ouex pipefail
 
 # this installs packages from all fedora/rpm repos
 dnf5 install -y \
-    gnome-clocks \
-    gnome-weather \
-    gnome-calculator \
-    gnome-calendar \
-    evince \
-    loupe \
     file-roller-nautilus \
     fastfetch \
     distrobox \
-    adobe-source-code-pro-fonts \
     steam-devices \
     just \
     tmux \
     yt-dlp \
     traceroute \
     nmap \
-    unrar \
+    unar \
     htop \
     btop \
     gdu \
     fish \
-    speedtest-cli \
     lolcat \
     cowsay \
     cmatrix
@@ -37,4 +29,7 @@ dnf5 install -y \
     yelp \
     gnome-tour \
     firefox \
-    firefox-langpacks
+    firefox-langpacks \
+    gnome-software \
+    gnome-disk-utility \
+    gnome-system-monitor
