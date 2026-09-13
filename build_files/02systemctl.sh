@@ -5,7 +5,6 @@ set -euox pipefail
     #systemctl enable libvirtd.service
 	systemctl enable podman.socket
 	systemctl enable flatpak-cleanup.timer
-	systemctl enable rpm-ostreed-automatic.timer
 	###Disabling stuff I dont want or need
 	#systemctl disable bluetooth.service # I dont have bluetooth
 	systemctl disable mdmonitor.service # I dont use any lvm or raid
