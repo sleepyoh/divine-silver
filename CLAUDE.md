@@ -64,6 +64,8 @@ Fetch the latest release rather than pinning a version, so the daily build keeps
 - `systemctl disable` fails the build if the unit doesn't exist. Packages removed in
   `01packages.sh` must not be disabled in `05systemctl.sh`. The commented-out lines and
   REMINDERs there record which ones to restore if a removal block is ever deleted.
+- A script that installs an icon outside an RPM must run `gtk-update-icon-cache -f -t` on that
+  theme, or GNOME won't show it (deployed files share one timestamp, so a stale cache looks valid).
 - Repos used during the build are removed or disabled again in `06cleanup.sh`.
 - `/run` and `/var` leftovers must be cleaned in `06cleanup.sh` so the lint step stays clean.
 - `/tmp` is a tmpfs at build time, so it never reaches the image.

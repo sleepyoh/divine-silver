@@ -27,3 +27,7 @@ install -Dm644 /usr/lib/mission-center/io.missioncenter.MissionCenter.desktop \
     /usr/share/applications/io.missioncenter.MissionCenter.desktop
 install -Dm644 /usr/lib/mission-center/io.missioncenter.MissionCenter.svg \
     /usr/share/icons/hicolor/scalable/apps/io.missioncenter.MissionCenter.svg
+
+# Add the icon to the icon cache. Files in a deployed image all have the same timestamp,
+# so GNOME can't tell a stale cache is out of date and the icon would never show.
+gtk-update-icon-cache -f -t /usr/share/icons/hicolor
