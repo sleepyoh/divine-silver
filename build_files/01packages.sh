@@ -23,7 +23,6 @@ dnf5 install -y \
 
 # Install applications
 dnf5 install -y \
-    bottles \
     gnome-boxes \
     gnome-calculator \
     evince \
