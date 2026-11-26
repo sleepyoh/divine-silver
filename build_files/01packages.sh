@@ -21,7 +21,6 @@ dnf5 install -y \
     cowsay \
     cmatrix \
     syncthing \
-    syncthingtray \
     gh
 
 # Install applications
