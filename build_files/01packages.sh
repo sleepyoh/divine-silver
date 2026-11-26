@@ -19,7 +19,9 @@ dnf5 install -y \
     fish \
     lolcat \
     cowsay \
-    cmatrix
+    cmatrix \
+    syncthing \
+    syncthingtray
 
 # Install applications
 dnf5 install -y \
