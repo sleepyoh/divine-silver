@@ -3,6 +3,7 @@ set -euox pipefail
 
 # Enable services
 systemctl enable podman.socket
+systemctl --global enable syncthing.service  # Syncthing for every user at login
 
 # Disable services I don't need
 # bluetooth.service stays enabled: these are laptops.
